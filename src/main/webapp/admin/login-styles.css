@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+
+}
+
+
+#login{
+	margin: auto auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 220px;
+	width: 400px;
+	margin-top: 200px;
+	color: white;
+	background: black;
+	opacity: 0.5;
+	border: solid 3px black;
+	border-radius: 30px;
+	position: relative;
+}
+
+#username span{
+	padding-right: 5px;
+	font-size: 20px;
+}
+
+#password span{
+	padding-right: 8px;
+	font-size: 20px;
+}
+
+#username input{
+	width: 200px;
+}
+
+#password input{
+	width: 200px;
+}
+
+
+#submit{
+    position: absolute;
+    right: 15px;
+    background: black;
+    color: white;
+    bottom: 15px;
+    width: 70px;
+    height: 30px;
+}
+

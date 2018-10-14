@@ -9,8 +9,31 @@
   	<dependency>
   		<groupId>javax.servlet</groupId>
   		<artifactId>javax.servlet-api</artifactId>
-  		<version>3.1.0</version>
+  		<version>3.1.0</version> <!-- maven location -->
   		<scope>provided</scope>
+  		<!--  scopes:
+  		 compile:will be used in all envs, will be packed and deployed 
+  		 test: only usable in test programs
+  		 runtime: same as compile except that it doesnt need to be compiled
+  		 provided: no packing and deployment, usable in main/test programs
+  		 system: (seldom use) same as provided, but must be provided locally, used with
+  		 system path in <dependency>, ie. <de..><systemPath>...<sys/></de>
+  		-->
+  		
+  		<!-- <classifier>  
+  		 for some jars, need to use this to specify which jar will be used
+  		 since their groupid/artifactid/version are the same
+  		 
+  		 <properties>
+  		 for multiple dependencies with same attributes, can extract as a property
+  		 ie.<pro..><version.var>3.1.0</ver>
+  		 use: <dep..><version>${version.var}</ver>
+  		 
+  		 if there are version conflicts, it is recommended to use<dependency management>
+  		 to specify the prefered version, in the following use no need to specify version
+  		 by default, maven use the version specified in <dependency> or the first one from
+  		 the indirect dependence
+  		  -->
   	</dependency>
   	<dependency>
   		<groupId>javax.servlet.jsp</groupId>
@@ -18,5 +41,43 @@
   		<version>2.3.1</version>
   		<scope>provided</scope>
   	</dependency>
+	<dependency>
+	    <groupId>commons-beanutils</groupId>
+	    <artifactId>commons-beanutils</artifactId>
+	    <version>1.9.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-dbutils</groupId>
+	    <artifactId>commons-dbutils</artifactId>
+	    <version>1.7</version>
+	</dependency>
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>8.0.11</version>
+	</dependency>
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	<dependency>
+	    <groupId>taglibs</groupId>
+	    <artifactId>standard</artifactId>
+	    <version>1.1.2</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>druid</artifactId>
+	    <version>1.1.10</version>
+	</dependency>
+	
+	
+	
+	
+	
+	
+	
+  	
   </dependencies>
 </project>

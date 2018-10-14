@@ -1,2 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1"/>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" metadata-complete="true" version="4.0">
+  <absolute-ordering/>
+  <display-name>AntStore</display-name>
+  <welcome-file-list>
+    <welcome-file>/webstore/login.html</welcome-file>
+    <welcome-file>/webstore/login.htm</welcome-file>
+    <welcome-file>/webstore/login.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>webstore.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/loginuser</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>signup</servlet-name>
+    <servlet-class>webstore.servlet.SignUpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>signup</servlet-name>
+    <url-pattern>/signup</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>adminLogin</servlet-name>
+    <servlet-class>admin.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>adminLogin</servlet-name>
+    <url-pattern>/admin/login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>GoodsServlet</servlet-name>
+    <servlet-class>admin.servlet.GoodsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoodsServlet</servlet-name>
+    <url-pattern>/admin/manageGoods</url-pattern>
+  </servlet-mapping>
+    <servlet>
+    <servlet-name>AdminServlet</servlet-name>
+    <servlet-class>admin.servlet.AdminServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminServlet</servlet-name>
+    <url-pattern>/admin/updateAdmin</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -31,7 +31,7 @@
 		
 		a:link { text-decoration: none}
 		a:hover { color: #00CCCC} 
-	</style>
+	</style>   
 </head>
 <body>
 	<div class="side-menu">

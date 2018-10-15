@@ -13,7 +13,7 @@
 		  HashMap<Integer, String> categories = Categories.getCategories();
 		  application.setAttribute("categories", categories);
 	%>
-
+  
 	<frameset rows="70, *" frameborder="no" border="0" framespacing="0">
 		<frame src="top.jsp" name="topFrame" scrolling="no" noresize="noresize">
 		<frameset cols="250, *" frameborder="no" border="0" framespacing="10">

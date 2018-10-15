@@ -24,7 +24,7 @@
 			<input id="submit" type="submit" value="GO">
 		</form>
 	</div>
-</body>
+</body>   
 <script type="text/javascript">
 
 </script>

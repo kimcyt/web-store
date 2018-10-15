@@ -10,7 +10,7 @@
 <body>
 
 	<h2>Add Item</h2>
-	<form action="http://localhost:8080/webStore/admin/manageGoods?action=add" method="post">
+	<form action="http://localhost:8080/webstorepractise/admin/manageGoods?action=add" method="post">
 		<span>Item name: </span><input type="text" name="name" required><br>
 		<span>Picture: </span><input type="file" name="image" ><br>
 		<span>Price: </span><input type="text" name="price" required><br>
@@ -38,10 +38,10 @@
 		<input type="submit" value="Submit Item"> 
 	</form>
 	<c:if test="${empty category }">
-		<a href="http://localhost:8080/webStore/admin/manageGoods?action=getPageData&currentPage=1">Go Back</a>
+		<a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage=1">Go Back</a>
 	</c:if>
 	<c:if test="${!empty category }">
-		<a href="http://localhost:8080/webStore/admin/manageGoods?action=getPageData&currentPage=1&category=${category}">Go Back</a>
+		<a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage=1&category=${category}">Go Back</a>
 	</c:if>
 
 </body>

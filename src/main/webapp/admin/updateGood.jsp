@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Edit</title>
 </head>
-<body>
+<body>   
 	<h2>Edit Item</h2>
 	<form action="http://localhost:8080/webstorepractise/admin/manageGoods?action=update&currentCategory=${category }" method="post">
 		<input type="text" name="currentPage" value="${currentPage }" style="display:none">

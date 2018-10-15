@@ -42,7 +42,7 @@
 			</c:forEach>
 		</ul>
 	</div>
-	
+	   
 
 </body>
 </html>

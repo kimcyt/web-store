@@ -111,7 +111,7 @@
 	        callback: function(num) {
 	        	$(window).attr("location", 
 	        			"http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage="+num);
-	        }
+	        }   
 	    })
 	</script>
 

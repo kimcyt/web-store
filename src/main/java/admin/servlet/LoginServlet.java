@@ -42,12 +42,11 @@ public class LoginServlet extends HttpServlet {
 		
 		if(admin == null) {
 			res.getWriter().write("Login failed: invalid account or password.");
-			res.setHeader("refresh", "2;url=http://localhost:8080/webStore/admin/adminLogin.jsp");
+			res.setHeader("refresh", "2;url=http://localhost:8080/webstorepractise/admin/adminLogin.jsp");
 		} else {
 			res.getWriter().write("Login succeeded: loading system......");
 			HttpSession session = req.getSession();
 			session.setAttribute("admin", admin);
-			//浏览器跳转，有不同的path
 			res.sendRedirect(req.getContextPath() + "/admin/main.jsp");
 		}
 		

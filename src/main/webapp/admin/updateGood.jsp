@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h2>Edit Item</h2>
-	<form action="http://localhost:8080/webStore/admin/manageGoods?action=update&currentCategory=${category }" method="post">
+	<form action="http://localhost:8080/webstorepractise/admin/manageGoods?action=update&currentCategory=${category }" method="post">
 		<input type="text" name="currentPage" value="${currentPage }" style="display:none">
 		<input type="text" name="gId" value="${currentGood.gId }" style="display:none">
 		<span>Item name: </span><input type="text" name="name" value="${currentGood.name }"><br>
@@ -31,10 +31,10 @@
 		<input type="submit" value="Update Item"> 
 	</form>
 	<c:if test="${empty category }">
-		<a href="http://localhost:8080/webStore/admin/manageGoods?action=getPageData&currentPage=${currentPage }">Go Back</a>
+		<a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage=${currentPage }">Go Back</a>
 	</c:if>
 	<c:if test="${!empty category }">
-		<a href="http://localhost:8080/webStore/admin/manageGoods?action=getPageData&currentPage=${currentPage }&category=${category}">Go Back</a>
+		<a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage=${currentPage }&category=${category}">Go Back</a>
 	</c:if>
 	
 

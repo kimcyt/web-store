@@ -89,9 +89,9 @@ public class GoodsDao {
 	
 	
 	private List<Goods> getPageGoods(int start, int end) throws SQLException {
-		sql = "select * from goods limit ?,?";  //limit from index to index
+		sql = "select * from goods order by ? desc limit ?,?";  //limit from index to index
 		List<Goods> allGoods = null;
-		allGoods = qr.query(sql, new BeanListHandler<Goods>(Goods.class), start, end);
+		allGoods = qr.query(sql, new BeanListHandler<Goods>(Goods.class), "gId", start, end);
 		Collections.reverse(allGoods);
 		return allGoods;
 	}

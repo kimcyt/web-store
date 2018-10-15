@@ -32,7 +32,7 @@ public class AdminServlet extends HttpServlet {
 			} else {
 				res.getWriter().write("Incorrect password, please try again.");
 			}
-			res.setHeader("refresh", "2;url=http://localhost:8080/webStore/admin/manageAccount.jsp");
+			res.setHeader("refresh", "2;url=http://localhost:8080/webstorepractise/admin/manageAccount.jsp");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

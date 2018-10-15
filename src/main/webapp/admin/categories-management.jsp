@@ -38,7 +38,7 @@
 	<div class="category-list">
 		<ul>
 			<c:forEach var="i" begin="1" end="${categories.size()}">
-				<li><a href="http://localhost:8080/webStore/admin/manageGoods?action=getPageData&currentPage=1&category=${i}">${categories.get(i)}</a></li>
+				<li><a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage=1&category=${i}">${categories.get(i)}</a></li>
 			</c:forEach>
 		</ul>
 	</div>

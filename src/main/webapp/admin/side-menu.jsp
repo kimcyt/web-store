@@ -36,7 +36,7 @@
 <body>
 	<div class="side-menu">
 		<ul>
-			<li><a href="http://localhost:8080/webStore/admin/manageGoods?action=getPageData&currentPage=1" target="content">Manage All</a></li>
+			<li><a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage=1" target="content">Manage All</a></li>
 			<li><a href="categories-management.jsp" target="content">Manage by Categories</a></li>
 			<li><a href="manageAccount.jsp" target="content">Manage Account</a></li>
 		</ul>

@@ -83,7 +83,7 @@ public class GoodsServlet extends BaseServlet {
 	}
 	
 	public String getPageData(HttpServletRequest req, HttpServletResponse res) {
-		System.out.println("iam in getPageData-----------");
+		System.out.println("iam in getPageData-----------looooooooo");
 		String dest="";
 		try {
 			//--todo: given currentPage number, return pageInfo object of that page

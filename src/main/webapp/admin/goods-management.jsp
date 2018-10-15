@@ -53,7 +53,7 @@
 		<h1>Goods Management</h1>
 		<br>
 		<div class="commands">
-			<a href="http://localhost:8080/webStore/admin/manageGoods?action=getCategories"><button>Add Item</button></a>
+			<a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getCategories"><button>Add Item</button></a>
 		</div>
 		<div class="goods-display">
 			
@@ -90,8 +90,8 @@
 								YES
 							 </c:if>
 						  </th>
-						  <th><a href="http://localhost:8080/webStore/admin/manageGoods?action=getGood&gId=${good.gId }&currentPage=${pageInfo.currentPage}">Edit Item</a></th>
-						  <th><a href="http://localhost:8080/webStore/admin/manageGoods?action=delete&gId=${good.gId }&currentPage=${pageInfo.currentPage}">Delete Item</a></th>
+						  <th><a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getGood&gId=${good.gId }&currentPage=${pageInfo.currentPage}">Edit Item</a></th>
+						  <th><a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=delete&gId=${good.gId }&currentPage=${pageInfo.currentPage}">Delete Item</a></th>
 						</tr>
 					  </c:forEach>
 				</table>
@@ -110,7 +110,7 @@
 	        totalSize: ${pageInfo.totalItems},/*共多少条记录*/
 	        callback: function(num) {
 	        	$(window).attr("location", 
-	        			"http://localhost:8080/webStore/admin/manageGoods?action=getPageData&currentPage="+num);
+	        			"http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage="+num);
 	        }
 	    })
 	</script>

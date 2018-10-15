@@ -10,7 +10,7 @@
 <body>
 	<div id="login">
 		<h2>Web Store Admin System</h2>
-		<form action="http://localhost:8080/webStore/admin/login" method="post">
+		<form action="http://localhost:8080/webstorepractise/admin/login" method="post">
 			<div id="username">
 				<span>Username</span><input type="text" name="accountId" required>
 			</div>

@@ -55,7 +55,7 @@
 		</c:if>
 		<div class="commands">
 		<!--todo: go to add directly with category = current category-->
-			<a href="http://localhost:8080/webStore/admin/manageGoods?action=getCategory&category=${category}"><button>Add Item</button></a>
+			<a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getCategory&category=${category}"><button>Add Item</button></a>
 		</div>
 		<div class="goods-display">
 			
@@ -92,8 +92,8 @@
 								YES
 							 </c:if>
 						  </th>
-						  <th><a href="http://localhost:8080/webStore/admin/manageGoods?action=getGood&gId=${good.gId }&currentPage=${pageInfo.currentPage}&category=${category}">Edit Item</a></th>
-						  <th><a href="http://localhost:8080/webStore/admin/manageGoods?action=delete&gId=${good.gId }&currentPage=${pageInfo.currentPage}&category=${category}">Delete Item</a></th>
+						  <th><a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=getGood&gId=${good.gId }&currentPage=${pageInfo.currentPage}&category=${category}">Edit Item</a></th>
+						  <th><a href="http://localhost:8080/webstorepractise/admin/manageGoods?action=delete&gId=${good.gId }&currentPage=${pageInfo.currentPage}&category=${category}">Delete Item</a></th>
 						</tr>
 					  </c:forEach>
 				</table>
@@ -112,7 +112,7 @@
 	        totalSize: ${pageInfo.totalItems},/*共多少条记录*/
 	        callback: function(num) {
 	        	$(window).attr("location", 
-	        			"http://localhost:8080/webStore/admin/manageGoods?action=getPageData&currentPage="+num+"&category="+${category});
+	        			"http://localhost:8080/webstorepractise/admin/manageGoods?action=getPageData&currentPage="+num+"&category="+${category});
 	        }
 	    })
 	</script>

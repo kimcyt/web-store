@@ -1,10 +1,20 @@
-package webstore.domain;
+package model;
 
 
-public class Admins {
-
+public class Admin {
+    
 	private String accountId;
 	private String password;
+	
+	
+	public Admin() {
+		super();
+	}
+	
+	public Admin(String accountId, String password) {
+		this.accountId = accountId;
+		this.password = password;
+	}
 	
 	public String getAccountId() {
 		return accountId;
@@ -18,6 +28,5 @@ public class Admins {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
 	
 }

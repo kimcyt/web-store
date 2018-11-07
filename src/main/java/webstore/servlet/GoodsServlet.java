@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
-import webstore.domain.Goods;
+import model.Good;
 import webstore.service.GoodsService;
 import webstore.utils.JdbcUtil;
 
@@ -31,7 +31,7 @@ public class GoodsServlet extends HttpServlet {
 		
 		//web servlet calls service servlet, and to be called by jsp to display data
 		GoodsService goodsService = new GoodsService();
-		List<Goods> allGoods = null;
+		List<Good> allGoods = null;
 		try {
 			allGoods = goodsService.getAllGoods();
 		} catch (SQLException e) {

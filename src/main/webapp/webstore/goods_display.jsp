@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@page import="java.util.*" 
 %>
-<%@page import="webstore.domain.Goods" 
+<%@page import="model.Good" 
 %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 

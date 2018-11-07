@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import admin.service.GoodsService;
-import webstore.domain.Categories;
-import webstore.domain.Goods;
+import model.Category;
+import model.Good;
 
 /**
  * Servlet implementation class BaseServlet

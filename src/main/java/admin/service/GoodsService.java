@@ -4,23 +4,23 @@ import java.sql.SQLException;
 import java.util.List;
 
 import admin.dao.GoodsDao;
-import webstore.domain.Categories;
-import webstore.domain.Goods;
-import webstore.domain.PageInfo;
+import model.Category;
+import model.Good;
+import model.PageInfo;
 
 public class GoodsService {
 	
 	private GoodsDao goodsDao = new GoodsDao();
 
-	public List<Categories> getAllCategories() throws SQLException{
+	public List<Category> getAllCategories() throws SQLException{
 		return goodsDao.findAllCategories();
 	}
 	
-	public Goods getCurrentGood(String gid) throws SQLException {
+	public Good getCurrentGood(String gid) throws SQLException {
 		return goodsDao.findCurrentGood(gid);
 	}
 	
-	public List<Goods> getAllGoods() throws SQLException {
+	public List<Good> getAllGoods() throws SQLException {
 		return goodsDao.findAllGoods();
 	}
 	

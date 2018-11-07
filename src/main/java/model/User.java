@@ -1,22 +1,22 @@
-package webstore.domain;
+package model;
 
 
 public class User {
 	
-	String userId;
+	int userId;
 	String username;
 	String password;
 	String email;
 	
 	
 	
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
 
 
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 

@@ -17,9 +17,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
 
 import admin.service.GoodsService;
-import webstore.domain.Categories;
-import webstore.domain.Goods;
-import webstore.domain.PageInfo;
+import model.Category;
+import model.Good;
+import model.PageInfo;
 import webstore.utils.JdbcUtil;
 
 /**
@@ -52,12 +52,12 @@ public class GoodsServlet extends BaseServlet {
 	public String getGoods(HttpServletRequest req, HttpServletResponse res) {
 		System.out.println("iam in getGoods-----------");
 		try {
-			List<Goods> allGoods = service.getAllGoods();
-			for(Goods good: allGoods) {
+			List<Good> allGoods = service.getAllGoods();
+			for(Good good: allGoods) {
 				System.out.println("good" + good);
 			}
 			req.setAttribute("allGoods", allGoods);
-			List<Categories> allCategories = service.getAllCategories();
+			List<Category> allCategories = service.getAllCategories();
 			req.setAttribute("allCategories", allCategories);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -68,9 +68,9 @@ public class GoodsServlet extends BaseServlet {
 	public String getGood(HttpServletRequest req, HttpServletResponse res) {
 		System.out.println("iam in getGood-----------");
 		try {
-			Goods currentGood = service.getCurrentGood(req.getParameter("gId"));
+			Good currentGood = service.getCurrentGood(req.getParameter("gId"));
 			req.setAttribute("currentGood", currentGood);
-			List<Categories> allCategories = service.getAllCategories();
+			List<Category> allCategories = service.getAllCategories();
 			req.setAttribute("allCategories", allCategories);
 			req.setAttribute("currentPage", req.getParameter("currentPage"));
 			if(req.getParameter("category")!=null) {
@@ -86,8 +86,9 @@ public class GoodsServlet extends BaseServlet {
 		System.out.println("iam in getPageData-----------looooooooo");
 		String dest="";
 		try {
-			//--todo: given currentPage number, return pageInfo object of that page
+			//given currentPage number, return pageInfo object of that page
 			PageInfo pageInfo;
+			System.out.println(req.toString());
 			String category = req.getParameter("category");
 			System.out.println("--------------category in get page data:" + category);
 			String itemsPerPage=req.getParameter("itemsPerPage");
@@ -95,10 +96,13 @@ public class GoodsServlet extends BaseServlet {
 			if(itemsPerPage==null) {
 				itemsPerPage=p.getProperty("itemsPerPage").toString();
 			} 
-			if(category==null) {
+			System.out.println("category in servlet: " + category);
+			if(category==null || category.isEmpty()) {
+				System.out.println("category in servlet is null: " + category);
 				pageInfo = service.getPageInfo(pageNum, itemsPerPage);
 				dest = "goods-management.jsp";
 			} else {
+				System.out.println("category in servlet is not null: " + category);
 				pageInfo = service.getCategoryPageInfo(category, pageNum, itemsPerPage);
 				req.setAttribute("category", category);
 				dest = "category-goods.jsp";
@@ -113,7 +117,7 @@ public class GoodsServlet extends BaseServlet {
 	public String getCategories(HttpServletRequest req, HttpServletResponse res) {
 		System.out.println("iam in getCatos-----------");
 		try {
-			List<Categories> allCategories = service.getAllCategories();
+			List<Category> allCategories = service.getAllCategories();
 			req.setAttribute("allCategories", allCategories);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -124,8 +128,8 @@ public class GoodsServlet extends BaseServlet {
 	public String getCategory(HttpServletRequest req, HttpServletResponse res) {
 		System.out.println("iam in getCate-----------");
 		int no = Integer.parseInt(req.getParameter("category"));
-		String category = Categories.getCategories().get(no);
-		Categories categ = new Categories(no, category);
+		String category = Category.getCategories().get(no);
+		Category categ = new Category(no, category);
 		req.setAttribute("category", categ);
 
 		return "addGood.jsp";

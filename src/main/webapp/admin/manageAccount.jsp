@@ -10,34 +10,9 @@
 <body>
 	<h1>Manage Account</h1>
 	<br>
-	<div class="update-account">
-		<form id="form" action="http://localhost:8080/webstorepractise/admin/updateAdmin?accountId=${admin.accountId }" method="post">
-			<span>User: ${admin.accountId }</span><br>
-			<span>Reset Password:</span><br>
-			<span>Old Password</span><input type="password" name="oldPwd" required><br>
-			<span>New Password</span><input id="new1" type="password" name="newPwd1" required><br>
-			<span>Retype Password</span><input id="new2" type="password" name="newPwd2" required> <span id="unmatched"></span><br>
-			<input type="submit" value="Submit" onClick=checkInputs(event) >
-		</form>
+	<div>
+		<span>User: ${admin.accountId }</span><br>
 	</div>
-	
 	<script src="jquery.min.js"></script>
-	<script>
-		function checkInputs(event){
-			event.preventDefault();
-			let pwd1 = document.getElementById("new1").value;
-			let pwd2 = document.getElementById("new2").value;
-			//let pwd1 = $("#form[name=newPwd1]").val();
-			//let pwd2 = $("#form[name=newPwd2]").val();
-			console.log(pwd1,pwd2);
-			if(pwd1===pwd2){
-				$("#form").submit();
-			} else{
-				document.getElementById("unmatched").innerHTML = "Password unmatched";
-			}
-		}
-		
-		
-	</script>
 </body>
 </html>

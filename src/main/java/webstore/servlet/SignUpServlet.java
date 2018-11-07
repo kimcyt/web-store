@@ -16,8 +16,8 @@ import org.apache.commons.dbutils.QueryRunner;
 //import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
+import model.User;
 import webstore.utils.JdbcUtil;
-import webstore.domain.User;
 
 /**
  * Servlet implementation class SignUpServlet

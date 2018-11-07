@@ -1,4 +1,4 @@
-package webstore.domain;
+package model;
 
 import java.util.List;
 
@@ -7,18 +7,18 @@ final public class PageInfo {
 	private final int currentPage;
 	private final long totalItems;
 	private final int totalPages;
-	private final List<Goods> goodList;
+	private final List<Good> goodList;
 	
 	
 	
-	private PageInfo(int currentPage, long totalItems, int totalPages, List<Goods> goodList) {
+	private PageInfo(int currentPage, long totalItems, int totalPages, List<Good> goodList) {
 		this.currentPage = currentPage;
 		this.totalItems = totalItems;
 		this.totalPages = totalPages;
 		this.goodList = goodList;
 	}
 	
-	public static PageInfo getPageInfo(int currentPage, long totalItems, List<Goods> goodList, int itemsPerPage) {
+	public static PageInfo getPageInfo(int currentPage, long totalItems, List<Good> goodList, int itemsPerPage) {
 		int totalP = (int)Math.ceil(totalItems/itemsPerPage)+1;
 		return new PageInfo(currentPage, totalItems, totalP, goodList);
 	}
@@ -35,7 +35,7 @@ final public class PageInfo {
 		return totalPages;
 	}
 
-	public List<Goods> getGoodList() {
+	public List<Good> getGoodList() {
 		return goodList;
 	}
 	

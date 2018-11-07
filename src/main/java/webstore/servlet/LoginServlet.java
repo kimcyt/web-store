@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 
-import webstore.domain.User;
+import model.User;
 import webstore.utils.JdbcUtil;
 
 @WebServlet("/loginuser")

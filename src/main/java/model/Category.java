@@ -1,17 +1,17 @@
-package webstore.domain;
+package model;
 
 import java.util.HashMap;
 
-public class Categories {
+public class Category {
 	private Integer NO;
 	private String name;
 	private static HashMap<Integer, String> categories;
 	
-	public Categories() {
+	public Category() {
 		super();
 	}
 	
-	public Categories(Integer no, String name) {
+	public Category(Integer no, String name) {
 		this.NO = no;
 		this.name = name;
 	}
@@ -35,7 +35,7 @@ public class Categories {
 	}
 
 	public static void setCategories(HashMap<Integer, String> categories) {
-		Categories.categories = categories;
+		Category.categories = categories;
 	}
 
 
@@ -45,8 +45,8 @@ public class Categories {
 		categories.put(1, "Office Supplies");
 		categories.put(2, "Furniture");
 		categories.put(3, "Fresh Produce");
-		categories.put(4, "Books Audio");
-		categories.put(5, "Fashion Designs");
+		categories.put(4, "Books and Audio");
+		categories.put(5, "Fashion Design");
 	}
 	
 	public static HashMap<Integer, String> getCategories(){

@@ -8,15 +8,15 @@
 <link href="/webstorepractise/webstore/common.css" rel="stylesheet">
 </head>
 <body>
-	<div class="footer">
+	<div class="footer row">
         <div class="links">
-            <a href="">About Us</a>|
-            <a href="">Contact Us</a>|
-            <a href="">Ads Service</a>|
-            <a href="">Community</a>|
-            <a href="">Engagement</a>
+            <a class="col" href="">About Us</a>
+            <a class="col" href="">Contact Us</a>
+            <a class="col" href="">Ads Service</a>
+            <a class="col" href="">Community</a>
+            <a class="col" href="">Engagement</a>
         </div>
-        <div class="copyright">
+        <div class="copyright col">
             Copyright @2017-2018
         </div>
     </div>

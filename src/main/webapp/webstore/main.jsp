@@ -33,11 +33,6 @@
 							src=".../800x400?auto=yes&bg=666&fg=444&text=Second slide"
 							alt="Second slide">
 					</div>
-					<div class="carousel-item">
-						<img class="d-block w-100"
-							src=".../800x400?auto=yes&bg=555&fg=333&text=Third slide"
-							alt="Third slide">
-					</div>
 				</div>
 				<a class="carousel-control-prev" href="#carouselExampleIndicators"
 					role="button" data-slide="prev"> <span
@@ -51,69 +46,65 @@
 			</div>
 		</div>
 
-
-		<div class="on_sale">
-			<div class="top">
-				<span id="h1">Goodies On Sale</span> <span id="h2">All items
-					50% - 70% OFF</span><br>
+		<div class="on_sale" >
+			<div class="title row">
+				<h2>Items On Sale</h2> 
 			</div>
-			<div class="body">
-				<ul class="sale_items">
-					<li><a href=""> <img
-							src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg">
-							<p>item description</p>
-							<p>$ price</p>
-					</a></li>
-					<li><a href=""> <img
-							src="/webstorepractise/images/TB2bYIncwvD8KJjy0FlXXagBFXa_!!0-saturn_solar.jpg_200x200.jpg_.webp">
-							<p>item description</p>
-							<p>$ price</p>
-					</a></li>
-					<li><a href=""> <img
-							src="/webstorepractise/images/fruits/TB2l3bjrH1YBuNjSszhXXcUsFXa_!!228955765.jpg_400x400q90.jpg">
-							<p>item description</p>
-							<p>$ price</p>
-					</a></li>
-					<li><a href=""> <img
-							src="/webstorepractise/images/fruits/TB2rlMvcQomBKNjSZFqXXXtqVXa_!!2196633500.jpg_400x400q90.jpg">
-							<p>item description</p>
-							<p>$ price</p>
-					</a></li>
+				<ul class="row">
+					<li class="items col-3 h-60">
+						<a href=""> <img src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg"></a>
+						<p class="item-name">Name</p>
+						<p class="item-price">$ price</p>
+					</li>
+					<li class="items col-3 h-60">
+						<a href=""> <img src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg"></a>
+						<p class="item-name">Name</p>
+						<p class="item-price">$ price</p>
+					</li>
+					<li class="items col-3 h-60">
+						<a href=""> <img src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg"></a>
+						<p class="item-name">Name</p>
+						<p class="item-price">$ price</p>
+					</li>
+					<li class="items col-3 h-60">
+						<a href=""> <img src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg"></a>
+						<p class="item-name">Name</p>
+						<p class="item-price">$ price</p>
+					</li>
 				</ul>
-			</div>
 		</div>
 
-		<div class="hot_items">
-			<div class="title">
-				<span>Hot Items</span>
+		<div class="regular-items">
+			<div class="title row">
+				<h2>Regular Items</h2>
 			</div>
-			<ul class="items">
-				<li><a href=""> <img
-						src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg">
-						<p>item description</p>
-						<p>$ price</p>
-				</a></li>
-				<li><a href=""> <img
-						src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg">
-						<p>item description</p>
-						<p>$ price</p>
-				</a></li>
-				<li><a href=""> <img
-						src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg">
-						<p>item description</p>
-						<p>$ price</p>
-				</a></li>
-				<li><a href=""> <img
-						src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg">
-						<p>item description</p>
-						<p>$ price</p>
-				</a></li>
+			<ul class="items row">
+				<li class="items col-3 h-60">
+						<a href=""> <img src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg"></a>
+						<p class="item-name">Name</p>
+						<p class="item-price">$ price</p>
+				</li>
+				<li class="items col-3 h-60">
+						<a href=""> <img src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg"></a>
+						<p class="item-name">Name</p>
+						<p class="item-price">$ price</p>
+				</li>
+				<li class="items col-3 h-60">
+						<a href=""> <img src="/webstorepractise/images/TB2gHW.hnqWBKNjSZFxXXcpLpXa_!!0-saturn_solar.jpg_220x220.jpg"></a>
+						<p class="item-name">Name</p>
+						<p class="item-price">$ price</p>
+				</li>
+				
 			</ul>
 		</div>
 
 		<%@ include file="footer.jsp"%>
 
 	</div>
+	
+	<script>
+		//todo: create apis to retrive images and item info, use js to dynamiclly display them
+	</script>
 
 </body>
 </html>

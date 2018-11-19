@@ -39,7 +39,7 @@
     <servlet-name>GoodsServlet</servlet-name>
     <url-pattern>/admin/manageGoods</url-pattern>
   </servlet-mapping>
-    <servlet>
+  <servlet>
     <servlet-name>AdminServlet</servlet-name>
     <servlet-class>admin.servlet.AdminServlet</servlet-class>
   </servlet>

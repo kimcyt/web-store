@@ -17,6 +17,7 @@ import model.Good;
  * Servlet implementation class BaseServlet
  */
 
+@WebServlet("/admin/manageGoods")
 public class BaseServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -32,10 +33,6 @@ public class BaseServlet extends HttpServlet {
 		}
 		Class<? extends BaseServlet> clazz = this.getClass();
 		try {
-			GoodsService service = new GoodsService();
-//			List<Catogories> allCatos = service.getAllCatogories();
-//			req.setAttribute("allCatogories", allCatos);
-			
 			//call the corresponding method from subclass given the method name and parameter types
 			java.lang.reflect.Method method = clazz.getMethod(action, HttpServletRequest.class, HttpServletResponse.class);
 			if(method!=null) {
@@ -46,6 +43,7 @@ public class BaseServlet extends HttpServlet {
 			}
 			
 		} catch(Exception e) {
+			System.out.println("error occured with good operation " + action);
 			e.printStackTrace();
 		}
 	}

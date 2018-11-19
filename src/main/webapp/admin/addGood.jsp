@@ -10,7 +10,13 @@
 <body>
 
 	<h2>Add Item</h2>
-	<form action="http://localhost:8080/webstorepractise/admin/manageGoods?action=add" method="post">
+	<!-- enctype: the encryption type when the form is sent to the server, 
+	the default type can only get the name but the content of the uploaded file
+	multipart divides each input in the body, file input has its own structure
+	cannot use getParameter() to get input data anymore -->
+	<!-- "${pageContext.request.contextPath}/manageGoods?action=add" -->
+	<form enctype="multipart/form-data" action="http://localhost:8080/webstorepractise/admin/manageGoods?action=add" method="post">
+		<input type="hidden" name="type" value="itemProfiles">
 		<span>Item name: </span><input type="text" name="name" required><br>
 		<span>Picture: </span><input type="file" name="image" ><br>
 		<span>Price: </span><input type="text" name="price" required><br>
